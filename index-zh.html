@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <title>Litecoin Core</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Litecoin Core Roapmap 2016</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://litecoin.org/" class="btn">Download</a>
+      <a href="https://github.com/litecoin-project/litecoin" class="btn">View on GitHub</a>
+    </section>
+
+    <section class="main-content">
+      <p>Litecoin Core Roadmap 2016</p>
+
+<p>Developers: Warren Togami, Charlie Lee, Adrian Gallagher, pooler, shaolinfry, Xinxi Wang, Kunal Jaiswal</p>
+
+<p>Source code - <a href="https://github.com/litecoin-project/litecoin">https://github.com/litecoin-project/litecoin</a></p>
+
+<p>Websites - <a href="https://litecoin.org/">https://litecoin.org/</a>, <a href="https://litecoincore.org/">https://litecoincore.org/</a></p>
+
+<p>内核开发组负责莱特币网络的开发维护工作，确保网络的安全稳定性。内核开发组将在确保网络安全稳定的基础上，积极扩展莱特币网络功能，使其更易用，功能更丰富。</p>
+
+<p>我们计划于9、10月发布下一个重大更新版--Verion 0.13.X。这是一个极为重要的升级版，其代码更优化，功能更丰富。其中包括备受期待的“隔离见证”、“闪电网络”、“智能合约”等功能。这些新特性的增加，将使得莱特币网络逐渐支持“智能合约”等更复杂、先进的功能。其新特性包括：</p>
+
+<ul>
+<li>Libsecp256k1验证: 在x86_64硬件上提升交易验证速度五至七倍。帮助新节点加入网络并减轻现有节点的负担。</li>
+<li>缩减钱包区块链体积</li>
+<li>优化内存使用</li>
+<li><em>Inbuilt Tor control socket</em> API support if Tor is running and also stream isolation for Tor communication.</li>
+<li>减少带宽占用</li>
+<li>采用隔离见证，支持更大的交易量，解决交易延展性问题</li>
+<li> 支持ZeroMQ 功能，ZeroMQ 是一种高性能分布式，可伸缩和快速消息架构，该功能将极大的提升莱特币网络的传输能力。</li>
+<li>HD钱包支持</li>
+<li><em>Obfuscated blockchain data</em> Several antivirus applications detect the Litecoin stored blockchain data as a malware threat. Litecoin 0.13 will obfuscate the blockchain data to rid these false positives. </li>
+</ul>
+
+<p>This update will also see the Inclusion of several BIPs to prepare Litecoin for upcoming innovations to do with the Lightning Network and create/use more complex smart contracts, these include:</p>
+
+<ul>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki">BIP9</a> ——此协议支持多个软分叉的部署。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki">BIP32</a> ——此协议让Litecoin核心支持分等级的钱包。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki">BIP68</a> ——此协议支持通过序列号执行相对locktime。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0111.mediawiki">BIP111</a> ——此协议扩展自BIP37，通过定义一个服务来允许节点通知他们支持布隆过滤器,也可以摆脱协议版本不使用布隆顾虑器服务的旧结点去连接新的服务。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki">BIP112</a> ——此协议用于重新定义一个区块的时间锁以及事务机制，采用过去11个区块的中位数替代他的时间戳，确保每个区块逾期同步增加。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki">BIP113</a> ——此协议结合了BIP68协议规则，描述一个Litecoin脚本系统中的新操作码（CHECKSEQUENCEVERIFY），它允许一个脚本的执行进行路径限制根据输出的时间开销。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0130.mediawiki">BIP130</a> ——此协议添加一个新消息头部文件,“sendheaders”,去表明一个节点更愿意接受新的区块的广告通过“headers”的信息,而不是一个“inv”。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0133.mediawiki">BIP133</a> ——此协议添加一个新“feefilter”费用控制功能,是指导节点不发送手续费用低于指定的费率的“inv”节点交易信息。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">BIP141</a> ——此协议定义了一个新的结构体称为为“witness”,用于区分Merkle Tree算法。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">BIP143</a> ——此协议包含一个无需目击证人的签名验证逻辑</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki">BIP144</a> ——此协议包含新消息的逻辑和序列化格式传播机制和区块，合并到隔离见证中。</li>
+<li>
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki">BIP152</a> ——此协议增加区块延迟功能，减小区块网络带宽需求。</li>
+</ul>
+
+<p>莱特币启用P2SH协议时，启用的钱包地址与比特币同样以3开头。考虑到这可能会给用户造成困扰，我们将启用一个独特的P2SH钱包地址前缀。莱特内核开发组将长期深入的开展“flexcap”区块相关研发工作。</p>
+
+      <footer class="site-footer">
+      <span class="site-footer-owner"><a href="https://github.com/litecoincore/litecoincore.org">litecoincore.org</a> is maintained by <a href="https://github.com/litecoincore">Litecoin Core developers</a>.</span>
+</footer>
+
+    </section>
+
+  
+  </body>
+</html>
