@@ -1,1 +1,1 @@
-# litecoincore.github.io
+# litecoincore.org
